@@ -17,7 +17,7 @@ JWT_SECRET="blockmatch-super-secret-jwt-key-2026"
 
 # FAUCETPAY_API_KEY: Your FaucetPay merchant API key for real crypto payouts.
 # Obtain from https://faucetpay.io/merchant/api
-FAUCETPAY_API_KEY= 4c3bb4fb71b6dcca8dfee1e4954bf01d338f14540b537d04e59afeef0eb07e0d
+FAUCETPAY_API_KEY= 2a20706b791a5034727c2efc41d2893703d1b8775f06868a5c57bbd1416cf6e3
 
 # FAUCETPAY_CURRENCY: Target crypto currency (e.g., BTC, LTC, DOGE, USDT).
 FAUCETPAY_CURRENCY=BTC
