@@ -1,0 +1,6 @@
+{
+  "name": "BlockMatch - Mining Arcade & Express API",
+  "description": "BlockMatch match-3 mining arcade with Firebase Firestore, Firebase Authentication, Express API, and automated real-time score and payout persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

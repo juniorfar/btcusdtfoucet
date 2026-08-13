@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with mining stats, wallet address, Sats and USDT balances",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "walletAddress": { "type": "string" },
+        "satsBalance": { "type": "number" },
+        "usdtBalance": { "type": "number" },
+        "preferredCurrency": { "type": "string", "enum": ["BTC", "USDT"] },
+        "highScore": { "type": "number" },
+        "level": { "type": "number" },
+        "movesPlayed": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "username", "email"]
+    },
+    "GameSession": {
+      "title": "GameSession",
+      "description": "Logged game session mining scores and stats",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "scoreGained": { "type": "number" },
+        "satsMined": { "type": "number" },
+        "usdtMined": { "type": "number" },
+        "currencyMined": { "type": "string", "enum": ["BTC", "USDT"] },
+        "levelAchieved": { "type": "number" },
+        "movesInSession": { "type": "number" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["userId", "scoreGained"]
+    },
+    "Payout": {
+      "title": "Payout",
+      "description": "Bitcoin & USDT payout requests to FaucetPay or Cwallet",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "username": { "type": "string" },
+        "walletAddress": { "type": "string" },
+        "provider": { "type": "string", "enum": ["faucetpay", "cwallet"] },
+        "currency": { "type": "string", "enum": ["BTC", "USDT"] },
+        "amountSats": { "type": "number" },
+        "amountUsdt": { "type": "number" },
+        "withdrawValueUsd": { "type": "number" },
+        "receiveAmount": { "type": "string" },
+        "status": { "type": "string" },
+        "txHash": { "type": "string" },
+        "requestedAt": { "type": "string" }
+      },
+      "required": ["userId", "walletAddress", "provider", "currency"]
+    }
+  }
+}

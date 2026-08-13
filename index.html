@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlockMatch - Mining Arcade</title>
+    <script>
+      // Defensive guard against browser extension wallet collisions on window.ethereum
+      (function() {
+        try {
+          const originalDefineProperty = Object.defineProperty;
+          Object.defineProperty = function(obj, prop, descriptor) {
+            if (obj === window && prop === 'ethereum') {
+              try {
+                return originalDefineProperty.apply(this, arguments);
+              } catch (e) {
+                console.warn('Prevented crash on window.ethereum redefinition:', e);
+                return obj;
+              }
+            }
+            return originalDefineProperty.apply(this, arguments);
+          };
+        } catch (e) {
+          // Ignore execution errors in defensive setup
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

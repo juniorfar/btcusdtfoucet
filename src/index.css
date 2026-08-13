@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --bg-0: #050505;
+  --bg-1: #0a0a0a;
+  --bg-2: #111111;
+  --line: rgba(255, 255, 255, 0.1);
+  --amber: #06b6d4;
+  --amber-dim: #0891b2;
+  --cyan: #06b6d4;
+  --mint: #22c55e;
+  --red: #ef4444;
+  --ink: #f3f4f6;
+  --ink-dim: #9ca3af;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+  --pixel: 'Press Start 2P', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-0);
+  color: var(--ink);
+  font-family: var(--mono);
+  min-height: 100vh;
+}
+
+/* Atmospheric Glows */
+.immersive-glow-cyan {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+}
+
+.immersive-glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.immersive-card {
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.immersive-card-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.immersive-card-hover:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.5);
+}
